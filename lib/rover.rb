@@ -1,34 +1,42 @@
-class Rover
+class Rover < Plateau
   attr_accessor :x_coordinate, :y_coordinate, :compass_point
 
-   # validates :x_coordinate, format: { with: /\A\d+\z/, message: "Integer only. No alphabets or special characters allowed." }
-  # validates :y_coordinate, format: { with: /\A\d+\z/, message: "Integer only. No alphabets or special characters allowed." }
-  #
-  # validates :compass_point, format: {with: /\A[^AaBbCCDdFfGgHhIiJjKkLlMmOoPpQqRrTtUuVvXxYyZz]+\z/, message: "Cardinal points input must be 'E', 'N', 'W', 'S' only"}
-  # validates :compass_point, length: {maximum: 1, too_long: "Only one characher is allowed"}
-
   def move_rover(instructions_string)
-    instructions = instructions_string.split("")
-    new_x_coordinate = @x_coordinate
-    new_y_coordinate = @y_coordinate
-    new_compass_position = []
-    position = @compass_point
-
-    instructions.each do |instruction|
-      if instruction == "L"
-        new_compass_position << turn_left(position)
-        position = turn_left(position)
-      elsif instruction == "R"
-        new_compass_position << turn_right(position)
-        position = turn_right(position)
-      else
-        new_x_coordinate = move_direction_x(new_x_coordinate, position)
-        new_y_coordinate = move_direction_y(new_y_coordinate, position)
-      end
+    if @x_coordinate.nil?
+      return "rover's x-coordinate cannot be nil"
+    end
+    if @y_coordinate.nil?
+      return "rover's y-coordinate cannot be nil"
+    end
+    if @compass_point.nil?
+      return "rover's campass point cannot be nil"
     end
 
-    [new_x_coordinate, new_y_coordinate, new_compass_position.last]
 
+    if @x_coordinate > @plateau_x_coordinate || @y_coordinate > @plateau_y_coordinate
+      return "Try again please, rover coordinates cannot be more than the plateu"
+    else
+      instructions = instructions_string.split("")
+      new_x_coordinate = @x_coordinate
+      new_y_coordinate = @y_coordinate
+      new_compass_position = []
+      position = @compass_point
+
+      instructions.each do |instruction|
+        if instruction == "L"
+          new_compass_position << turn_left(position)
+          position = turn_left(position)
+        elsif instruction == "R"
+          new_compass_position << turn_right(position)
+          position = turn_right(position)
+        else
+          new_x_coordinate = move_direction_x(new_x_coordinate, position)
+          new_y_coordinate = move_direction_y(new_y_coordinate, position)
+        end
+      end
+
+      [new_x_coordinate, new_y_coordinate, new_compass_position.last]
+    end
   end
 
   def turn_left(position)
@@ -76,6 +84,5 @@ class Rover
     end
     new_y_coordinate
   end
-
 
 end
