@@ -1,13 +1,19 @@
 class Rover
   attr_accessor :x_coordinate, :y_coordinate, :compass_point
 
+   # validates :x_coordinate, format: { with: /\A\d+\z/, message: "Integer only. No alphabets or special characters allowed." }
+  # validates :y_coordinate, format: { with: /\A\d+\z/, message: "Integer only. No alphabets or special characters allowed." }
+  #
+  # validates :compass_point, format: {with: /\A[^AaBbCCDdFfGgHhIiJjKkLlMmOoPpQqRrTtUuVvXxYyZz]+\z/, message: "Cardinal points input must be 'E', 'N', 'W', 'S' only"}
+  # validates :compass_point, length: {maximum: 1, too_long: "Only one characher is allowed"}
+
   def move_rover(instructions_string)
     instructions = instructions_string.split("")
     new_x_coordinate = @x_coordinate
     new_y_coordinate = @y_coordinate
     new_compass_position = []
     position = @compass_point
-    #keep track of position or update position
+
     instructions.each do |instruction|
       if instruction == "L"
         new_compass_position << turn_left(position)
@@ -53,9 +59,9 @@ class Rover
 
   def move_direction_x(x_coordinate, position)
     new_x_coordinate = x_coordinate
-    if position == "E"
+    if position == 'E'
       new_x_coordinate = new_x_coordinate + 1
-    elsif position == "W"
+    elsif position == 'W'
       new_x_coordinate = new_x_coordinate - 1
     end
     new_x_coordinate
@@ -63,9 +69,9 @@ class Rover
 
   def move_direction_y(y_coordinate, position)
     new_y_coordinate = y_coordinate
-    if position == "N"
+    if position == 'N'
       new_y_coordinate = new_y_coordinate + 1
-    elsif position == "S"
+    elsif position == 'S'
       new_y_coordinate = new_y_coordinate - 1
     end
     new_y_coordinate
