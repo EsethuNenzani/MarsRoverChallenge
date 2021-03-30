@@ -1,8 +1,9 @@
 class Plateau
-  attr_accessor :x_coordinate, :y_coordinate
-  # has_many :rovers
+  attr_accessor :plateau_x_coordinate, :plateau_y_coordinate
 
-  # validates :x_coordinate, format: { with: /\A\d+\z/, message: "Integer only. No alphabets or special characters allowed." }
-  # validates :y_coordinate, format: { with: /\A\d+\z/, message: "Integer only. No alphabets or special characters allowed." }
+  def initialize (plateau_x_coordinate, plateau_y_coordinate)
+    @plateau_x_coordinate = plateau_x_coordinate
+    @plateau_y_coordinate = plateau_y_coordinate
+  end
 
 end
