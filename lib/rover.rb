@@ -35,7 +35,7 @@ class Rover < Plateau
         end
       end
 
-      [new_x_coordinate, new_y_coordinate, new_compass_position.last]
+      [new_x_coordinate, new_y_coordinate, new_compass_position.last].join(" ")
     end
   end
 

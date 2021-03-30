@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba85baf-3d90-404c-9a09-d85c1e3b3f94" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/plateau.rb" afterPath="$PROJECT_DIR$/lib/plateau.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rover.rb" afterPath="$PROJECT_DIR$/lib/rover.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/rover_spec.rb" afterPath="$PROJECT_DIR$/spec/rover_spec.rb" />
     </list>
     <ignored path="mars_rover_challenge.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,13 +41,13 @@
       <file leaf-file-name="rover.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/rover.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            <state relative-caret-position="666">
+              <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
               <folding>
-                <element signature="e#1316#1579#0" expanded="false" />
-                <element signature="e#1583#1850#0" expanded="false" />
-                <element signature="e#1854#2110#0" expanded="false" />
-                <element signature="e#2114#2370#0" expanded="false" />
+                <element signature="e#1326#1589#0" expanded="false" />
+                <element signature="e#1593#1860#0" expanded="false" />
+                <element signature="e#1864#2120#0" expanded="false" />
+                <element signature="e#2124#2380#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -491,12 +489,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617016291389</updated>
-      <workItem from="1617016293510" duration="34080000" />
+      <workItem from="1617016293510" duration="34667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34080000" />
+    <option name="totallyTimeSpent" value="34667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="25" width="1920" height="1002" extended-state="6" />
@@ -648,13 +646,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rover.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        <state relative-caret-position="666">
+          <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
           <folding>
-            <element signature="e#1316#1579#0" expanded="false" />
-            <element signature="e#1583#1850#0" expanded="false" />
-            <element signature="e#1854#2110#0" expanded="false" />
-            <element signature="e#2114#2370#0" expanded="false" />
+            <element signature="e#1326#1589#0" expanded="false" />
+            <element signature="e#1593#1860#0" expanded="false" />
+            <element signature="e#1864#2120#0" expanded="false" />
+            <element signature="e#2124#2380#0" expanded="false" />
           </folding>
         </state>
       </provider>
